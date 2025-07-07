@@ -1,0 +1,111 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Arial', sans-serif; /* גופן ברירת מחדל - נשנה בהמשך */
+  background-color: #f4f4f4; /* רקע כללי בהיר */
+}
+
+.welcome-container {
+  background-image: url('../assets/imges/galery/תמונה1.webp'); /* החלף ב-URL של תמונה יפה */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* גובה 100% */
+  width: 100vw; /* רוחב 100% */
+  margin: 0; /* אין צורך במרווח */
+  color: #CDAA7D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed; /* שינוי ל-fixed כדי למנוע גלילה */
+  top: 0; /* מיקום עליון */
+  left: 0; /* מיקום שמאלי */
+  box-sizing: border-box;
+  border-radius: 0; /* אין פינות מעוגלות */
+  box-shadow: none; /* אין צל */
+}
+
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* שכבה כהה ושקופה */
+  pointer-events: none;
+  backdrop-filter: blur(6px); /* טשטוש על התמונה */
+}
+
+.welcome-container h1 {
+  font-family: 'serif', Times New Roman; /* פונט אלגנטי יותר לכותרת */
+  font-size: 3.5em; /* גודל פונט מעט קטן יותר */
+  margin-bottom: 25px;
+  color: #f7d08a; /* גוון זהב בהיר יותר */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeIn 1s ease-out 0.5s forwards; /* אנימציית כניסה */
+}
+
+.welcome-container p {
+  font-family: 'Georgia', serif; /* פונט אלגנטי יותר לפסקה */
+  font-size: 1.8em; /* גודל פונט מעט קטן יותר */
+  color: white;
+  margin-bottom: 35px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.7s forwards; /* אנימציית כניסה */
+}
+
+.button-row {
+  display: flex;
+  gap: 1.5rem; /* מרווח קטן יותר בין הכפתורים */
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out 0.9s forwards; /* אנימציה מלמטה למעלה */
+}
+
+.button-row button {
+  min-width: 280px; /* הגדרת רוחב מינימלי קבוע */
+  font-size: 1.1em;
+  padding: 1em 2em;
+  background-color: transparent; /* רקע שקוף */
+  color: white; /* צבע טקסט לבן */
+  border: 2px solid #f7d08a;
+  border-radius: 30px; /* צורה מעוגלת יותר */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* צל עדין יותר */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: rgba(247, 208, 138, 0.2); /* רקע זהב שקוף קלות בה hover */
+  color: black;
+  border-color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
