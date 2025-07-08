@@ -1,0 +1,109 @@
+/* react/src/Components/AllWorkers.css */
+.all-workers-main-container {
+    min-height: 100vh;
+    background: #f7f5f2;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px; /* Adjusted for fixed nav */
+}
+
+.all-workers-paper {
+    width: 100%;
+    max-width: 1050px;
+    margin-top: 64px; /* mt: 8 */
+    background: #fff;
+    border-radius: 40px; /* 5 * 8px */
+    padding: 40px; /* 5 * 8px */
+    box-shadow: 0 8px 32px 0 rgba(205,170,125,0.2) !important; /* #CDAA7D33 */
+    min-height: 400px;
+}
+
+.all-workers-title {
+    color: #CDAA7D !important;
+    font-weight: 900 !important;
+    margin-bottom: 32px !important; /* mb: 4 */
+    letter-spacing: 2px !important;
+    text-align: center;
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+    font-size: 2.3rem !important;
+}
+
+.all-workers-list-item {
+    border-radius: 24px !important; /* 3 * 8px */
+    margin-bottom: 16px !important; /* mb: 2 */
+    box-shadow: 0 2px 8px rgba(205,170,125,0.06666666666666667) !important; /* #CDAA7D11 */
+    transition: background 0.2s !important;
+    padding-left: 24px !important; /* px: 3 */
+    padding-right: 24px !important; /* px: 3 */
+}
+
+.all-workers-list-item.even {
+    background: #fff;
+}
+
+.all-workers-list-item.odd {
+    background: #f9f6f1;
+}
+
+.all-workers-list-item:hover {
+    background: #fffbe9 !important;
+}
+
+.all-workers-delete-button {
+    color: #222 !important;
+    background: #CDAA7D !important;
+    margin-left: 16px !important; /* ml: 2 */
+}
+
+.all-workers-delete-button:hover {
+    background: #222 !important;
+    color: #CDAA7D !important;
+}
+
+.all-workers-item-name {
+    color: #222 !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+}
+
+.all-workers-expand-icon {
+    margin-left: 8px !important; /* ml: 1 */
+    color: #CDAA7D !important;
+}
+
+.all-workers-details-box {
+    background: #f6f2ea;
+    border-radius: 16px; /* 2 * 8px */
+    padding: 24px; /* 3 * 8px */
+    margin-left: 32px; /* mx: 4 */
+    margin-right: 32px; /* mx: 4 */
+    margin-bottom: 16px; /* mb: 2 */
+    border: 1px solid rgba(205,170,125,0.26666666666666666); /* #CDAA7D44 */
+    box-shadow: 0 2px 8px rgba(205,170,125,0.13333333333333333); /* #CDAA7D22 */
+}
+
+.all-workers-details-title {
+    color: #CDAA7D !important;
+    font-weight: 700 !important;
+    margin-bottom: 8px !important; /* mb: 1 */
+}
+
+.all-workers-details-text {
+    color: #222 !important;
+    font-size: 1.08rem !important;
+}
+
+.all-workers-divider {
+    margin-top: 8px !important; /* my: 1 */
+    margin-bottom: 8px !important; /* my: 1 */
+}

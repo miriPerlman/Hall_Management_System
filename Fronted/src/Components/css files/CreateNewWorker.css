@@ -1,0 +1,50 @@
+/* react/src/Components/CreateNewWorker.css */
+.create-worker-main-container {
+    margin-top: 60px; /* Adjust for fixed navbar */
+    min-height: calc(100vh - 60px);
+    background: #f7f5f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-worker-paper {
+    padding: 40px !important; /* p: 5 */
+    border-radius: 32px !important; /* 4 * 8px */
+    box-shadow: 0 8px 32px 0 rgba(205,170,125,0.2) !important; /* #CDAA7D33 */
+    background: #fff;
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.create-worker-title {
+    color: #CDAA7D !important;
+    font-weight: 800 !important;
+    margin-bottom: 24px !important; /* mb: 3 */
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.create-worker-label {
+    color: #CDAA7D !important;
+}
+
+.create-worker-submit-button {
+    background: #CDAA7D !important;
+    color: #222 !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+    border-radius: 16px !important; /* 2 * 8px */
+    margin-top: 16px !important; /* mt: 2 */
+}
+
+.create-worker-submit-button:hover {
+    background: #b89a6b !important;
+    color: #fff !important;
+}
+
+.create-worker-success-message {
+    color: green !important;
+    text-align: center;
+    margin-top: 8px !important; /* mt: 1 */
+}

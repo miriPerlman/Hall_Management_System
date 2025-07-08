@@ -1,0 +1,76 @@
+/* react/src/Components/GaleryMenuButton.css */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-dropdown .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-family: 'Rod', sans-serif;
+    font-size: 26px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px 0;
+    margin: 0 15px;
+    border-bottom: 2px solid transparent;
+    height: 40px;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.nav-link-arrow {
+    font-size: 22px;
+    margin-right: 4px;
+    margin-top: 2px;
+    color: #CDAA7D;
+    transition: color 0.3s;
+}
+
+.nav-dropdown-content {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #fffbe8;
+    border-radius: 16px;
+    box-shadow: 0 6px 24px 0 rgba(205,170,125,0.18);
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 100;
+    padding: 10px 0;
+    border: 1px solid #f3e2c2;
+}
+
+.nav-dropdown-item-button {
+    background: none;
+    border: none;
+    color: #213547;
+    font-weight: 700;
+    font-size: 0.95em;
+    padding: 10px 22px 10px 14px;
+    text-align: right;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s, color 0.2s;
+    margin: 2px 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-dropdown-item-button.hover,
+.nav-dropdown-item-button:hover { /* Added :hover for clarity */
+    background: #f7e7c1;
+    color: #b8956a;
+}
+
+.nav-dropdown-item-icon {
+    color: #b8956a;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}

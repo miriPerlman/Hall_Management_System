@@ -1,0 +1,69 @@
+/* react/src/Components/Manager.css */
+.manager-main-box {
+    margin-top: 60px; /* Adjust for fixed navbar */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    padding: 48px; /* p: 6 */
+    border-radius: 24px; /* 3 * 8px */
+    background: #fff; /* white */
+    box-shadow: 0 4px 24px 0 rgba(205,170,125,0.10);
+    text-align: center;
+    font-family: 'Varela Round', Alef, Arial, sans-serif;
+}
+
+.manager-greeting {
+    font-weight: 700 !important;
+    margin-bottom: 16px !important; /* mb: 2 */
+    letter-spacing: 1px !important;
+    color: #CDAA7D !important; /* gold */
+    font-size: 2.1rem !important;
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+    text-shadow: 0 2px 8px rgba(205,170,125,0.13333333333333333) !important; /* #CDAA7D22 */
+}
+
+.manager-emoji {
+    font-size: 1.7rem;
+}
+
+.manager-welcome-message {
+    margin-bottom: 32px !important; /* mb: 4 */
+    font-weight: 400 !important;
+    color: #CDAA7D !important; /* gold */
+    font-size: 1.1rem !important;
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+    letter-spacing: 1px !important;
+    text-shadow: 0 1px 4px rgba(205,170,125,0.06666666666666667) !important; /* #CDAA7D11 */
+}
+
+.manager-button {
+    font-weight: 600 !important;
+    border-radius: 16px !important; /* 2 * 8px */
+    border-color: #CDAA7D !important; /* gold */
+    color: #CDAA7D !important; /* gold */
+    background: #fff !important; /* white */
+    font-size: 1.05rem !important;
+    padding: 9.6px 8px !important; /* py: 1.2, px: 1 */
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+    letter-spacing: 1px !important;
+    box-shadow: 0 1px 4px rgba(205,170,125,0.06666666666666667) !important; /* #CDAA7D11 */
+    transition: all 0.2s !important;
+    text-transform: none !important;
+}
+
+.manager-button:hover {
+    background: #CDAA7D !important; /* gold */
+    color: #fff !important; /* white */
+    border-color: #CDAA7D !important; /* gold */
+    box-shadow: 0 2px 8px rgba(205,170,125,0.2) !important; /* #CDAA7D33 */
+}
+
+.manager-good-luck {
+    margin-top: 24px !important; /* mt: 3 */
+    color: #CDAA7D !important; /* gold */
+    font-weight: 400 !important;
+    font-size: 3.1rem !important;
+    letter-spacing: 1px !important;
+    font-family: 'Varela Round', Alef, Arial, sans-serif !important;
+    text-shadow: 0 1px 4px rgba(205,170,125,0.13333333333333333) !important; /* #CDAA7D22 */
+}

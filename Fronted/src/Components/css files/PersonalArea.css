@@ -1,0 +1,66 @@
+/* react/src/Components/PersonalArea.css */
+.personal-area-container {
+    padding-top: 60px; /* Adjust for fixed navbar */
+    text-align: center;
+}
+
+.personal-area-account-button {
+    position: fixed !important;
+    top: 24px !important;
+    right: 24px !important;
+    z-index: 2000 !important;
+    background: #181818 !important;
+    color: #CDAA7D !important;
+    text-transform: none !important;
+    border-color: #CDAA7D !important;
+    border-radius: 2px !important;
+    font-family: 'Sanchez Condensed' !important;
+    font-weight: 700 !important;
+    font-size: 1.1em !important;
+    opacity: 1 !important;
+    cursor: default !important;
+    box-shadow: 0 2px 8px rgba(205,170,125,0.13) !important; /* #CDAA7D22 */
+    letter-spacing: 1px !important;
+    padding: 4px 20px !important; /* px: 5, py: 0.5 */
+    min-width: 0 !important;
+    border-width: 1.5px !important;
+    border-style: solid !important;
+    padding-left: 13px !important;
+    padding-right: 13px !important;
+}
+
+.personal-area-account-button .MuiButton-startIcon {
+    margin-right: 8px !important; /* 1 * 8px */
+}
+
+.personal-area-account-button.Mui-disabled {
+    color: #CDAA7D !important;
+    border-color: #CDAA7D !important;
+    background: #181818 !important;
+    opacity: 1 !important;
+}
+
+.personal-area-title {
+    margin-top: 20px;
+}
+
+.personal-area-welcome-message {
+    margin-bottom: 20px;
+}
+
+.personal-area-order-button,
+.personal-area-feedback-button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: 1px solid #CDAA7D;
+    background-color: #CDAA7D;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.personal-area-order-button:hover,
+.personal-area-feedback-button:hover {
+    background-color: #b8956a;
+}

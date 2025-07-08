@@ -1,0 +1,28 @@
+/* react/src/Components/SignUp.css */
+.signup-title {
+    margin-top: 60px; /* Adjust for fixed navbar */
+    text-align: center;
+}
+
+.signup-form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 500px;
+    background-color: #f9f9f9;
+}
+
+.signup-form-control {
+    margin-bottom: 16px !important;
+}
+
+.signup-button-stack {
+    justify-content: center;
+    margin-top: 24px !important;
+}
+
+.signup-message {
+    text-align: center;
+    margin-top: 16px !important;
+}

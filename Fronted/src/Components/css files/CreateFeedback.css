@@ -1,0 +1,36 @@
+/* react/src/Components/CreateFeedback.css */
+.create-feedback-container {
+    max-width: 400px;
+    margin: 6em auto 0 auto; /* Adjusted margin-top for fixed nav */
+    padding: 32px; /* 4 * 8px */
+    border-radius: 24px; /* 3 * 8px */
+    background: #fff;
+}
+
+.create-feedback-textfield {
+    margin-bottom: 16px !important; /* 2 * 8px */
+}
+
+.create-feedback-rating-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px; /* 2 * 8px */
+}
+
+.create-feedback-rating-label {
+    margin-right: 8px; /* 1 * 8px */
+}
+
+.create-feedback-submit-button {
+    background: #1976d2 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    border-radius: 16px !important; /* 2 * 8px */
+    padding: 9.6px 0 !important; /* 1.2 * 8px */
+    margin-top: 8px !important; /* 1 * 8px */
+}
+
+.create-feedback-submit-button:hover {
+    background: #115293 !important;
+}

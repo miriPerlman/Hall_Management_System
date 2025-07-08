@@ -1,0 +1,12 @@
+/* react/src/Components/Calander.css */
+.calendar-badge-x {
+    color: red;
+}
+
+.calendar-container {
+    margin-top: 80px; /* Adjust for fixed navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Adjust height */
+}
