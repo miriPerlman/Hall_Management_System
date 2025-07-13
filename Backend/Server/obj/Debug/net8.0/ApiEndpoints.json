@@ -25,13 +25,13 @@
     "Parameters": [
       {
         "Name": "customer",
-        "Type": "Dal.models.Customer",
+        "Type": "Dal.Models.Customer",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Dal.models.Customer",
+        "Type": "Dal.Models.Customer",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -86,20 +86,204 @@
   {
     "ContainingType": "Server.Controllers.DishController",
     "Method": "CreateNewDish",
-    "RelativePath": "api/Dish",
+    "RelativePath": "api/Dish/createNewDish",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dish",
-        "Type": "Dal.models.Dish",
+        "Name": "newDish",
+        "Type": "Dal.Models.Dish",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Dal.models.Dish",
+        "Type": "Dal.Models.Dish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "CreateNewFirstDish",
+    "RelativePath": "api/Dish/createNewFirstDish",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newDish",
+        "Type": "Dal.Models.FirstDish",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.FirstDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "CreateNewLastDish",
+    "RelativePath": "api/Dish/createNewLastDish",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newDish",
+        "Type": "Dal.Models.LastDish",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.LastDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "CreateNewMainDish",
+    "RelativePath": "api/Dish/createNewMainDish",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newDish",
+        "Type": "Dal.Models.MainDish",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.MainDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "CreateNewSalad",
+    "RelativePath": "api/Dish/createNewSalad",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newDish",
+        "Type": "Dal.Models.Salad",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.Salad",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "GetFirstDish",
+    "RelativePath": "api/Dish/getFirstDishDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.FirstDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "GetLastDish",
+    "RelativePath": "api/Dish/getLastDishDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.LastDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "GetMaintDish",
+    "RelativePath": "api/Dish/getMainDishDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.MainDish",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.DishController",
+    "Method": "GetSalad",
+    "RelativePath": "api/Dish/getSaladDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.Salad",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -129,13 +313,13 @@
     "Parameters": [
       {
         "Name": "invitation",
-        "Type": "Dal.models.Invitation",
+        "Type": "Dal.Models.Invitation",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Dal.models.Invitation",
+        "Type": "Dal.Models.Invitation",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -155,7 +339,7 @@
     "Parameters": [
       {
         "Name": "newInvitation",
-        "Type": "Dal.models.Invitation",
+        "Type": "Dal.Models.Invitation",
         "IsRequired": true
       }
     ],
@@ -234,7 +418,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Dal.models.Invitation, Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Dal.Models.Invitation, Dal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -264,13 +448,13 @@
     "Parameters": [
       {
         "Name": "newWorker",
-        "Type": "Dal.models.Worker",
+        "Type": "Dal.Models.Worker",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Dal.models.Worker",
+        "Type": "Dal.Models.Worker",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -328,7 +512,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Dal.models.Worker",
+        "Type": "Dal.Models.Worker",
         "MediaTypes": [
           "text/plain",
           "application/json",

@@ -1,5 +1,5 @@
 ﻿using BL.Api;
-using Dal.models;
+using Dal.Models;
 using BL.Services;
 using Microsoft.AspNetCore.Mvc;
 using Server.Controllers;

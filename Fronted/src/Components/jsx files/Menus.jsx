@@ -72,7 +72,7 @@ const RowBox = styled(Box)(({ theme }) => ({
   alignItems: 'flex-start',
   flexWrap: 'wrap',
   gap: theme.spacing(2),
-  marginTop: theme.spacing(30), // מרחיק מה-NAV
+  marginTop: theme.spacing(30),
   marginBottom: theme.spacing(4),
 }));
 
@@ -89,7 +89,6 @@ const Menus = () => {
     <Box sx={{ maxWidth: 1600, mx: 'auto', mt: 6, mb: 6 }}>
       <RowBox>
         {chefs.map((chef, idx) => {
-          // המשפט הראשון בלבד
           const firstSentence = chef.about.split('\n')[0].split('. ')[0] + '.';
           const rest = chef.about.replace(firstSentence, '').trim();
 
@@ -155,7 +154,7 @@ const Menus = () => {
       <Typography align="center" sx={{ mb: 4 }}>
         Here you can see our beautiful hall
       </Typography>
-      {/* כאן אפשר להוסיף גלריית תמונות של האולם */}
+    
     </Box>
   );
 };

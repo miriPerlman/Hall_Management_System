@@ -7,7 +7,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { PickersDay } from '@mui/x-date-pickers/PickersDay';
 import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { DayCalendarSkeleton } from '@mui/x-date-pickers/DayCalendarSkeleton';
-import '../css files/Calender.css'; // New import
+import '../css files/Calender.css'; 
 
 const Calendar = () => {
     const navigate = useNavigate();
@@ -43,7 +43,7 @@ const Calendar = () => {
             <Badge
                 key={day.toString()}
                 overlap="circular"
-                badgeContent={isSelected ? <span className="calendar-badge-x">X</span> : undefined} // Replaced inline style
+                badgeContent={isSelected ? <span className="calendar-badge-x">X</span> : undefined} 
             >
                 <PickersDay
                     {...other}

@@ -18,32 +18,32 @@ const navigate = useNavigate();
     <Box
       component={Paper}
       elevation={3}
-      className="create-feedback-container" // Replaced sx prop
+      className="create-feedback-container" 
     >
       <Typography variant="h5" align="center" gutterBottom>
         יצירת משוב חדש
       </Typography>
       <form onSubmit={handleSubmit}>
         <TextField
-          label="שם"
+          label="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           fullWidth
           required
-          className="create-feedback-textfield" // Replaced sx prop
+          className="create-feedback-textfield"
         />
         <TextField
-          label="משוב"
+          label="feedback"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           fullWidth
           required
           multiline
           rows={3}
-          className="create-feedback-textfield" // Replaced sx prop
+          className="create-feedback-textfield" 
         />
-        <Box className="create-feedback-rating-box"> {/* Replaced sx prop */}
-          <Typography className="create-feedback-rating-label">דירוג:</Typography> {/* Replaced sx prop */}
+        <Box className="create-feedback-rating-box">
+          <Typography className="create-feedback-rating-label">דירוג:</Typography>
           <Rating
             value={rating}
             onChange={(_, newValue) => setRating(newValue)}
@@ -54,9 +54,9 @@ const navigate = useNavigate();
           type="submit"
           variant="contained"
           fullWidth
-          className="create-feedback-submit-button" // Replaced sx prop
+          className="create-feedback-submit-button" 
         >
-          שלח משוב
+          Send feedback
         </Button>
       </form>
     </Box>

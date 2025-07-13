@@ -1,0 +1,109 @@
+/* כפתורי אירועים */
+.gallery-event-buttons-fixed {
+  position: fixed;
+  top: 100px; /* מתחת ל-navbar */
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 2000;
+}
+
+.gallery-event-btn {
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #1976d2;
+  background: #fff;
+  color: #1976d2;
+  font-weight: bold;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  min-width: 120px;
+  letter-spacing: 1px;
+  box-shadow: none;
+}
+
+.gallery-event-btn.selected,
+.gallery-event-btn:hover {
+  background: #1976d2;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+}
+
+/* גלריה */
+.gallery-main-container {
+  padding: 32px;
+  margin-top: 80px;
+}
+
+.gallery-title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.gallery-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.gallery-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(33, 53, 71, 0.08);
+  cursor: pointer;
+  flex-basis: calc(33.33% - 16px);
+  max-width: calc(33.33% - 16px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gallery-image-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(33, 53, 71, 0.18);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* מודאל */
+.gallery-modal .MuiBackdrop-root {
+  background: rgba(0,0,0,0.7) !important;
+}
+.gallery-modal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.gallery-modal-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.3);
+}
+
+/* כפתורי ניווט במודאל */
+.gallery-modal-nav-btn {
+  color: #fff !important;
+  background: none !important;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gallery-modal-nav-btn.left {
+  left: 32px;
+}
+.gallery-modal-nav-btn.right {
+  right: 32px;
+}

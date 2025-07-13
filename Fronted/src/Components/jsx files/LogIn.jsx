@@ -17,7 +17,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { getByIdAsyncAction } from '../../Redux/thunk';
-import '../css files/LOgin.css'; // New import
+import '../css files/LOgin.css';
 
 const THEME = createTheme({
   palette: {
@@ -37,7 +37,6 @@ const THEME = createTheme({
     },
   },
 });
-
 const LogIn = () => {
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -51,24 +50,28 @@ const LogIn = () => {
 
   const handleSubmit = async (event) => {
     if (event) event.preventDefault();
+    if (!password) {
+      setMessage('Password/ID required');
+      return;
+    }
     try {
       const resultAction = await dispatch(getByIdAsyncAction(password));
       if (getByIdAsyncAction.fulfilled.match(resultAction)) {
-        if(resultAction.payload.type=='customer'){
+        if (resultAction.payload.type === 'customer') {
           setMessage('Welcome again!!');
           const firstName = resultAction.payload.obj.firstName || 'Guest';
           await new Promise((resolve) => setTimeout(resolve, 1000));
           navigate(`/PersonalArea/${firstName}`);
-        }
-        else {
-         setMessage('Welcome worker!')
+        } else {
+          setMessage('Welcome worker!');
           await new Promise((resolve) => setTimeout(resolve, 1000));
-          const firstName=resultAction.payload.obj.name;
-            const managerFirstName=resultAction.payload.obj.name;
-          if(resultAction.payload.workerType==='Manager'){
+          const firstName = resultAction.payload.obj.name;
+          const managerFirstName = resultAction.payload.obj.name;
+          if (resultAction.payload.workerType === 'Manager') {
             navigate(`/Manager/${managerFirstName}`);
+          } else {
+            navigate(`/Worker/${password}`);
           }
-         else navigate(`/Worker/${password}`);
         }
       } else {
         setMessage('Please sign up to continue.');
@@ -81,16 +84,16 @@ const LogIn = () => {
 
   return (
     <ThemeProvider theme={THEME}>
-      <Box className="login-main-container"> {/* Replaced sx prop */}
-        <Box className="login-form-box"> {/* Replaced sx prop */}
-          <Avatar className="login-avatar"> {/* Replaced sx prop */}
-            <LockOutlinedIcon className="login-lock-icon" /> {/* Replaced sx prop */}
+      <Box className="login-main-container">
+        <Box className="login-form-box">
+          <Avatar className="login-avatar">
+            <LockOutlinedIcon className="login-lock-icon" />
           </Avatar>
           <Typography
             variant="h4"
             color="primary"
             gutterBottom
-            className="login-title" // Replaced sx prop
+            className="login-title"
           >
             Log In
           </Typography>
@@ -98,7 +101,7 @@ const LogIn = () => {
             variant="subtitle1"
             color="secondary"
             gutterBottom
-            className="login-subtitle" // Replaced sx prop
+            className="login-subtitle"
           >
             Welcome! Please enter your password to continue.
           </Typography>
@@ -106,14 +109,14 @@ const LogIn = () => {
             <Typography
               variant="subtitle2"
               color="secondary"
-              className="login-message" // Replaced sx prop
+              className="login-message"
             >
               {message}
             </Typography>
           )}
           <Box
             component="form"
-            className="login-form" // Replaced sx prop
+            className="login-form"
             onSubmit={handleSubmit}
           >
             <TextField
@@ -132,37 +135,36 @@ const LogIn = () => {
                       aria-label="toggle password visibility"
                       onClick={handleClickShowPassword}
                       edge="end"
-                      className="login-visibility-toggle" // Replaced sx prop
+                      className="login-visibility-toggle"
                     >
                       {showPassword ? <VisibilityOff /> : <Visibility />}
                     </IconButton>
                   </InputAdornment>
                 ),
-                className: 'login-password-input-props', // Replaced sx prop
+                className: 'login-password-input-props',
               }}
               InputLabelProps={{
-                className: 'login-password-label-props' // Replaced sx prop
+                className: 'login-password-label-props'
               }}
-              className="login-password-textfield" // Replaced sx prop
+              className="login-password-textfield"
             />
-            <Stack direction="row" spacing={2} className="login-button-stack"> {/* Replaced sx prop */}
+            <Stack direction="row" spacing={2} className="login-button-stack">
               <Button
                 variant="outlined"
                 startIcon={<SendIcon />}
                 onClick={() => navigate('/order/guest')}
                 color="secondary"
-                className="login-guest-button" // Replaced sx prop
+                className="login-guest-button"
               >
                 Guest
               </Button>
               <Button
-                variant="contained"
-                color="primary"
-                type="submit"
-                onClick={handleSubmit}
-                className="login-signin-button" // Replaced sx prop
+                variant="outlined"
+                onClick={() => navigate(`/SignUp/${password || ''}`)}
+                color="secondary"
+                className="login-guest-button"
               >
-                Sign in
+                SINGUP
               </Button>
             </Stack>
           </Box>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Dal.models;
+namespace Dal.Models;
 
 public partial class DatabaseManager : DbContext
 {

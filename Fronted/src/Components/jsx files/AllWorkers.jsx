@@ -30,14 +30,14 @@ const AllWorkers = () => {
     };
 
     return (
-        <Box className="all-workers-main-container"> {/* Added className */}
+        <Box className="all-workers-main-container"> 
             <Paper
                 elevation={4}
-                className="all-workers-paper" // Added className
+                className="all-workers-paper" 
             >
                 <Typography
                     variant="h3"
-                    className="all-workers-title" // Added className
+                    className="all-workers-title" 
                 >
                     All Workers
                 </Typography>
@@ -74,9 +74,9 @@ const AllWorkers = () => {
                                 />
                             </ListItem>
                             <Collapse in={openIndex === idx} timeout="auto" unmountOnExit>
-                                <Box className="all-workers-details-box"> {/* Added className */}
-                                    <Typography className="all-workers-details-title">Details:</Typography> {/* Added className */}
-                                    <Typography className="all-workers-details-text"> {/* Added className */}
+                                <Box className="all-workers-details-box"> 
+                                    <Typography className="all-workers-details-title">Details:</Typography> 
+                                    <Typography className="all-workers-details-text"> 
                                         <b>ID:</b> {worker.id}<br />
                                         <b>Email:</b> {String(worker.email) || "null"}<br />
                                         <b>Seniority:</b> {worker.seniority || "null"}<br />
@@ -84,7 +84,7 @@ const AllWorkers = () => {
                                     </Typography>
                                 </Box>
                             </Collapse>
-                            {idx < allWorkers.length - 1 && <Divider className="all-workers-divider" />} {/* Added className */}
+                            {idx < allWorkers.length - 1 && <Divider className="all-workers-divider" />} 
                         </Box>
                     ))}
                 </List>

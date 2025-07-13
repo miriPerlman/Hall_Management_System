@@ -1,5 +1,5 @@
 ﻿using Dal.Api;
-using Dal.models;
+using Dal.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

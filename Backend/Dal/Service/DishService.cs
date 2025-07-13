@@ -1,5 +1,5 @@
 ﻿using Dal.Api;
-using Dal.models;
+using Dal.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace Dal.Service
         }
         public async Task Create(Dish dish)
         {
-            await db.AddAsync(dish);
+            await db.Dishes.AddAsync(dish);
             await db.SaveChangesAsync();
 
 

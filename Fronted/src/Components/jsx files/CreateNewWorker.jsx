@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Box, TextField, Button, Paper, Typography, MenuItem, Stack } from "@mui/material";
 import { addNewWorker } from "../../Redux/thunk";
-import '../css files/CreateNewWorker.css'; // New import
+import '../css files/CreateNewWorker.css';
 
 const gold = "#CDAA7D";
 const white = "#fff";

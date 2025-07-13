@@ -66,7 +66,7 @@ export const getDetailsOfDate = createAsyncThunk(
     }
 );
 
-// הגדרת הפונקציה
+
 const handleError = async (response) => {
   if (!response.ok) {
     throw new Error(`Failed to fetch worker. Status: ${response.status}`);
@@ -81,7 +81,7 @@ export const getWorkerById = createAsyncThunk(
   async (id) => {
     const response = await fetch(`http://localhost:5263/api/Worker/${id}`);
     
-    return await handleError(response);  // שימוש ב-`handleError`
+    return await handleError(response);  
   }
 );
 
@@ -116,6 +116,13 @@ export const addNewWorker = createAsyncThunk(
             },
             body: JSON.stringify(workerData),
         });
+        return await handleError(response);
+    }
+);
+export const GetFirstDishSetails = createAsyncThunk(
+    'dishes/getFirstDish',
+    async () => {
+        const response = await fetch('http://localhost:5263/api/Dish/getFirstDishDetails');
         return await handleError(response);
     }
 );

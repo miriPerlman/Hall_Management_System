@@ -4,7 +4,7 @@ using BL.Services;
 using Dal.Api;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Dal.models;
+using Dal.Models;
 
 namespace Server.Controllers
 {

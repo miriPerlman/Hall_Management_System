@@ -11,7 +11,7 @@ import GaleryMenuButton from './Components/jsx files/GaleryMenuButton';
 import Galery from './Components/jsx files/Galery';
 import Worker from './Components/jsx files/Worker';
 import PersonalArea from './Components/jsx files/PersonalArea';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Manager from './Components/jsx files/Manager';
 import AllWorkers from './Components/jsx files/AllWorkers';
 import CreateNewWorker from './Components/jsx files/createNewWorker';
@@ -26,23 +26,32 @@ const initialFeedbacks = [
   { name: "אלון שמואלי", comment: "הצוות היה מקצועי, האווירה הייתה נהדרת. ממליץ בחום!", rating: 5, avatar: "" },
   { name: "גלית כהן", comment: "היה פשוט מושלם! תודה על הכל.", rating: 5, avatar: "" },
 ];
+
+const FEEDBACKS_KEY = "feedbacks";
+
 const App = () => {
-  const [feedbacks, setFeedbacks] = useState(initialFeedbacks);
+  const [feedbacks, setFeedbacks] = useState(() => {
+    const saved = localStorage.getItem(FEEDBACKS_KEY);
+    return saved ? JSON.parse(saved) : initialFeedbacks;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(FEEDBACKS_KEY, JSON.stringify(feedbacks));
+  }, [feedbacks]);
 
   const addFeedback = (newFeedback) => {
     setFeedbacks(prev => [newFeedback, ...prev]);
   };
+
   return (
     <BrowserRouter>
       <nav>
         <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Home</NavLink>
         <NavLink to="/LogIn" className={({ isActive }) => isActive ? "active" : ""}>Log in</NavLink>
-        {/* <Galery /> */}
         <GaleryMenuButton />
-        {/* <NavLink to="/Catalog" className={({ isActive }) => isActive ? "active" : ""}>Catalog</NavLink>
-        <NavLink to="/Calendar" className={({ isActive }) => isActive ? "active" : ""}>Calendar</NavLink> */}
       </nav>
       <Routes>
+        <Route path="/SignUp" element={<SignUp />} />
         <Route path="/SignUp/:id" element={<SignUp />} />
         <Route path="/" element={<Home />} />
         <Route path="/Order/:name" element={<Order />} />
@@ -52,7 +61,7 @@ const App = () => {
         <Route path="/Menus" element={<Menus />} />
         <Route path="/Feedback" element={<Feedback feedbacks={feedbacks} />} />
         <Route path="/Worker/:Id" element={<Worker />} />
-        <Route path="/PersonalArea/:name" element={<PersonalArea />} />
+        <Route path="/PersonalArea/:id" element={<PersonalArea />} />
         <Route path="/CreateFeedback" element={<CreateFeedback addFeedback={addFeedback} />} />
         <Route path="/Manager/:name" element={<Manager />} />
         <Route path="/AllWorkers" element={<AllWorkers />} />
@@ -61,4 +70,5 @@ const App = () => {
     </BrowserRouter>
   );
 };
+
 export default App;

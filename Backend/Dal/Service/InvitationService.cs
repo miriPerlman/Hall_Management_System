@@ -1,5 +1,5 @@
 ﻿using Dal.Api;
-using Dal.models;
+using Dal.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,9 +16,10 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public Task Create(Invitation item)
+        public async Task Create(Invitation item)
         {
-            throw new NotImplementedException();
+            await db.Invitations.AddAsync(item);
+            await db.SaveChangesAsync();
         }
 
         public async Task Delete(Invitation item)
@@ -59,9 +60,6 @@ namespace Dal.Service
             {
                 throw new Exception("Error!! Invitation not found!!");
             }
-
-
-
         }
     }
 }

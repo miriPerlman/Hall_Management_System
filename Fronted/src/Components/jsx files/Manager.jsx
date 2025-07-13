@@ -7,7 +7,7 @@ import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import LoginIcon from '@mui/icons-material/Login';
 import FeedbackIcon from '@mui/icons-material/Feedback';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
-import '../css files/Manager.css'; // New import
+import '../css files/Manager.css';
 
 const gold = "#CDAA7D";
 const white = "#fff";
@@ -20,16 +20,16 @@ const Manager = () => {
 
   return (
     <>
-    <Box className="manager-main-box"> {/* Added className */}
+    <Box className="manager-main-box"> 
       <Typography
         variant="h3"
-        className="manager-greeting" // Added className
+        className="manager-greeting" 
       >
-        Hello {name} <span className="manager-emoji">👋</span> {/* Added className */}
+        Hello {name} <span className="manager-emoji">👋</span> 
       </Typography>
       <Typography
         variant="subtitle1"
-        className="manager-welcome-message" // Added className
+        className="manager-welcome-message" 
       >
         Welcome to the management area
       </Typography>
@@ -38,7 +38,7 @@ const Manager = () => {
           variant="outlined"
           startIcon={<PersonAddIcon {...iconProps} />}
           onClick={() => navigate('/CreateNewWorker')}
-          className="manager-button" // Added className
+          className="manager-button" 
         >
           Add Worker
         </Button>
@@ -46,7 +46,7 @@ const Manager = () => {
           variant="outlined"
           startIcon={<ListAltIcon {...iconProps} />}
           onClick={() => navigate('/AllWorkers')}
-          className="manager-button" // Added className
+          className="manager-button" 
         >
           Workers Details
         </Button>
@@ -55,7 +55,7 @@ const Manager = () => {
           variant="outlined"
           startIcon={<ReceiptLongIcon sx={{ color: gold, fontSize: 32 }} />}
           onClick={() => navigate('/orders-management')}
-          className="manager-button" // Added className
+          className="manager-button" 
           fullWidth
         >
           Orders Management
@@ -64,7 +64,7 @@ const Manager = () => {
           variant="outlined"
           startIcon={<LoginIcon {...iconProps} />}
           onClick={() => navigate(`/Worker/${name}`)}
-          className="manager-button" // Added className
+          className="manager-button"
         >
           Login as Worker
         </Button>
@@ -72,7 +72,7 @@ const Manager = () => {
           variant="outlined"
           startIcon={<FeedbackIcon {...iconProps} />}
           onClick={() => navigate('/Feedback')}
-          className="manager-button" // Added className
+          className="manager-button" 
         >
           Feedback Management
         </Button>
@@ -80,7 +80,7 @@ const Manager = () => {
     </Box>
     <Typography
       variant="subtitle2"
-      className="manager-good-luck" // Added className
+      className="manager-good-luck"
     >
       Good Luck!
     </Typography>

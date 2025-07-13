@@ -1,6 +1,6 @@
 ﻿using BL.Api;
 using Dal.Api;
-using Dal.models;
+using Dal.Models;
 using Dal.Service;
 using System;
 using System.Collections.Generic;

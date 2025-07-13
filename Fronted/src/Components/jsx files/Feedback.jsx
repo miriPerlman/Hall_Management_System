@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardContent,
@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import PersonIcon from "@mui/icons-material/Person";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
-import '../css files/Feedback.css'; // New import
+import '../css files/Feedback.css'; 
 
 const Feedback = ({ feedbacks = [] }) => {
   const [showAll, setShowAll] = useState(false);
@@ -19,37 +19,37 @@ const Feedback = ({ feedbacks = [] }) => {
 
   return (
     <>
-      <Typography variant="h4" align="center" className="feedback-title"> {/* Added className */}
-        משובי לקוחות
+      <Typography variant="h4" align="center" className="feedback-title">
+       Customer feedback
       </Typography>
-      <Typography align="center" className="feedback-subtitle"> {/* Added className */}
-        מה הלקוחות שלנו מספרים עלינו?
+      <Typography align="center" className="feedback-subtitle"> 
+        What do our customers say about us?
       </Typography>
-      <Box className="feedback-cards-container"> {/* Added className */}
+      <Box className="feedback-cards-container">
         {visibleFeedbacks.map((fb, idx) => (
           <Card
             key={idx}
-            className="feedback-card" // Added className
+            className="feedback-card" 
           >
-            <Avatar className="feedback-avatar" src={fb.avatar}> {/* Added className */}
-              <PersonIcon className="feedback-person-icon" /> {/* Added className */}
+            <Avatar className="feedback-avatar" src={fb.avatar}> 
+              <PersonIcon className="feedback-person-icon" />
             </Avatar>
-            <CardContent className="feedback-card-content"> {/* Added className */}
+            <CardContent className="feedback-card-content"> 
               <Typography
                 variant="h6"
                 component="div"
                 gutterBottom
-                className="feedback-card-name" // Added className
+                className="feedback-card-name" 
               >
                 {fb.name}
               </Typography>
               <Typography
                 variant="body1"
-                className="feedback-card-comment" // Added className
+                className="feedback-card-comment" 
               >
                 {fb.comment}
               </Typography>
-              <Box className="feedback-rating-box"> {/* Added className */}
+              <Box className="feedback-rating-box">
                 <Stack direction="row" alignItems="center" spacing={1}>
                   <Rating value={fb.rating} readOnly />
                   <Typography variant="body2" color="text.secondary"></Typography>
@@ -60,14 +60,14 @@ const Feedback = ({ feedbacks = [] }) => {
         ))}
       </Box>
       {!showAll && feedbacks.length > 3 && (
-        <Box className="feedback-show-all-button-container"> {/* Added className */}
+        <Box className="feedback-show-all-button-container"> 
           <Button
             variant="contained"
             endIcon={<ArrowDropDownIcon />}
             onClick={() => setShowAll(true)}
-            className="feedback-show-all-button" // Added className
+            className="feedback-show-all-button" 
           >
-            לצפיה בכל המשובים
+            View all responses
           </Button>
         </Box>
       )}

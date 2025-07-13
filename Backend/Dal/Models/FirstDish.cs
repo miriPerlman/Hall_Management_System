@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Dal.models;
+namespace Dal.Models;
 
 public partial class FirstDish
 {
@@ -9,7 +9,7 @@ public partial class FirstDish
 
     public bool GrilledFish { get; set; }
 
-    public long SalmonFish { get; set; }
+    public bool SalmonFish { get; set; }
 
     public bool PotatoBourekas { get; set; }
 
