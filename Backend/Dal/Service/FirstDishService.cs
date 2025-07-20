@@ -19,10 +19,11 @@ namespace Dal.Service
         }
 
         // Fix for CS0535: Implement 'ICrud<FirstDish>.Create(FirstDish)'
-        public async Task Create(FirstDish entity)
+        public async Task<FirstDish> Create(FirstDish entity)
         {
             await db.AddAsync(entity);
-            await db.SaveChangesAsync();
+            await db.SaveChangesAsync().ConfigureAwait(false); 
+            return entity;
         }
 
         // Fix for CS0738: Implement 'ICrud<FirstDish>.Read()' with correct return type

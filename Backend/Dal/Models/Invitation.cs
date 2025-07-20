@@ -21,7 +21,7 @@ public partial class Invitation
 
     public bool? InMorning { get; set; }
 
-    public virtual Customer Customer { get; set; } = null!;
+    public virtual Customer? Customer { get; set; } = null!;
 
     public virtual Dish? Dish { get; set; }
 }

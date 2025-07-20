@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj": {}
+    "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj": {}
   },
   "projects": {
-    "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj": {
+    "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
+        "projectUniqueName": "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
         "projectName": "Dal",
-        "projectPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
+        "projectPath": "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\obj\\",
+        "outputPath": "C:\\Hall-Management-System\\Backend\\Dal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

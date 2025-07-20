@@ -11,9 +11,8 @@ export const getAllCustomers = createAsyncThunk(
 
 export const getCustomerById = createAsyncThunk(
     'customers/fetchCustomerById',
-    async (_, { getState }) => {
-        const state = getState();
-        const response = await fetch(`http://localhost:5263/api/customers/${state.user.id}`);
+    async (id) => {
+        const response = await fetch(`http://localhost:5263/api/customers/${id}`);
         return await handleError(response);
     }
 );
@@ -69,9 +68,10 @@ export const getDetailsOfDate = createAsyncThunk(
 
 const handleError = async (response) => {
   if (!response.ok) {
-    throw new Error(`Failed to fetch worker. Status: ${response.status}`);
+    throw new Error(`Failed to fetch data. Status: ${response.status}`);
   }
   const data = await response.json();
+  console.log(data)
   return data;
 };
 
@@ -119,10 +119,128 @@ export const addNewWorker = createAsyncThunk(
         return await handleError(response);
     }
 );
-export const GetFirstDishSetails = createAsyncThunk(
+export const getFirstDish = createAsyncThunk(
     'dishes/getFirstDish',
     async () => {
         const response = await fetch('http://localhost:5263/api/Dish/getFirstDishDetails');
         return await handleError(response);
+    }
+);
+
+export const getMainDish = createAsyncThunk(
+    "dishes/getMainDish",
+     async () => {
+            const response = await fetch("http://localhost:5263/api/Dish/getMainDishDetails");
+        return await handleError(response);
+    }
+);
+
+export const getLastDish = createAsyncThunk(
+    "dishes/getLastDish",
+    async () => {
+       
+            const response = await fetch("http://localhost:5263/api/Dish/getLastDishDetails");
+           return await handleError(response);
+    }
+);
+
+export const getSalads = createAsyncThunk(
+    "dishes/getSalads",
+    async () => {
+            const response = await fetch("http://localhost:5263/api/Dish/getSaladDetails");
+            return await handleError(response);
+    }
+);
+
+// --- פונקציות ליצירה (שמירה) ---
+
+export const createFirstDish = createAsyncThunk(
+    "dishes/createFirstDish",
+    async (dishData) => {
+        const response = await fetch('http://localhost:5263/api/Dish/createNewFirstDish', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dishData),
+        });
+        return await handleError(response);
+    }
+);
+export const createMainDish = createAsyncThunk(
+    "dishes/createMainDish",
+    async (dishData) => {
+        const response = await fetch('http://localhost:5263/api/Dish/createNewMainDish', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dishData),
+        });
+        return await handleError(response);
+    }
+);
+export const createLastDish = createAsyncThunk(
+    "dishes/createLastDish",
+    async (dishData) => {
+        const response = await fetch('http://localhost:5263/api/Dish/createNewLastDish', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dishData),
+        });
+        return await handleError(response);
+    }
+);
+export const createSalad = createAsyncThunk(
+    "dishes/createSalad",
+    async (dishData) => {
+        const response = await fetch('http://localhost:5263/api/Dish/createNewSalad', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dishData),
+        });
+        return await handleError(response);
+    }
+);
+export const createDish = createAsyncThunk(
+    "dishes/createDish",
+    async (dishData) => {
+        const response = await fetch('http://localhost:5263/api/Dish/createNewDish', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dishData),
+        });
+        return await handleError(response);
+    }
+);
+
+export const createInvitation = createAsyncThunk(
+    "invitation/createInvitation",
+    async (invitationData) => {
+        const response = await fetch('http://localhost:5263/api/Invitations/CreateNewInvitation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(invitationData),
+        });
+        return await handleError(response);
+    }
+);
+
+
+export const GetAllOrderHistory = createAsyncThunk(
+    "dishes/GetAllOrderHistory",
+    async (customerId) => {
+        const response = await fetch(`http://localhost:5263/api/invitations/${customerId}`);
+        const data = await response.json();
+        console.log(data); 
+        return data.$values || [];
     }
 );

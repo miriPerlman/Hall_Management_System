@@ -24,29 +24,32 @@ namespace BL.Services
             MainDish=dal.mainDish;
             Salad=dal.salad;
         }
+        public async Task<Dish> GetDishByID(int id)
+        {
+            return (await dishes.Read()).FirstOrDefault(dish=>dish.Id==id);
+        }
         public async Task<Dish> Create(Dish dish)
         {
-            await dishes.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
-            return dish; // Fix: Return the created dish object explicitly.
+            return await dishes.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
+             // Fix: Return the created dish object explicitly.
         }
         public async Task<FirstDish> CreateFirstDish(FirstDish dish)
         {
-            await FirstDish.Create(dish); 
-            return dish;
+            return await FirstDish.Create(dish); 
         }
         public async Task<LastDish> CreateLastDish(LastDish dish){
-            await LastDish.Create(dish);
-            return dish;
+           return await LastDish.Create(dish);
+        
         }
         public async Task<MainDish> CreateMainDish(MainDish dish)
         {
-            await MainDish.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
-            return dish;
+           return await MainDish.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
+           
         }
         public async Task<Salad> CreateSalad(Salad dish)
         {
-            await Salad.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
-            return dish;
+          return await Salad.Create(dish); // Fix: Ensure the Create method is awaited without returning its result.
+          
         }
 
         public async Task<FirstDish> getOrCreateFirstDishDetails()
@@ -73,6 +76,7 @@ namespace BL.Services
 
             return firstDish;
         }
+
         public async Task<LastDish> getOrCreateLastDishDetails()
         {
             var existingDishes = await LastDish.Read();

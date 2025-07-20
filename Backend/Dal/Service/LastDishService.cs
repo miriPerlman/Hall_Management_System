@@ -18,10 +18,11 @@ namespace Dal.Service
             this.db = db;
         }
 
-        public async Task Create(LastDish entity)
+        public async Task<LastDish> Create(LastDish entity)
         {
             await db.LastDishes.AddAsync(entity);
             await db.SaveChangesAsync();
+            return entity;
         }
 
         public Task<List<LastDish>> Read()

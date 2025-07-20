@@ -13,6 +13,6 @@ namespace BL.Api
         public IBLInvitation BlInvitation { get; }
         public IBLworker BlWorker { get; }
         public IBLdish Bldish { get; }
-        public IBLauthorization? BlAuthorization { get; }
+        public IBLauthorization BlAuthorization { get; }
     }
 }

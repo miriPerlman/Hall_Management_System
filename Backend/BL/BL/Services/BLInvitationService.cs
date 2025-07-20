@@ -17,9 +17,15 @@ namespace BL.Services
         {
             invitation = dal.invitations;
         }
-        public void Create(Invitation newInvitation)
+        public async Task<Invitation> Create(Invitation newInvitation)
         {
-            invitation.Create(newInvitation);
+            return await invitation.Create(newInvitation);
+        }
+
+        public async Task<List<Invitation>> GetByCustomerId(int customerId)
+        {
+            var allInvitations = await invitation.Read();
+            return allInvitations.Where(inv => inv.CustomerId == customerId).ToList();
         }
 
 

@@ -11,10 +11,11 @@ namespace BL.Api
     {
         public Task<List<int>> GetBusyDatesPerMonth(int month, int year);
         public Task DeleteInvitation(int id);
-        public void Create(Invitation customer);
+        public Task<Invitation> Create(Invitation customer);
         public Task<List<Invitation>> GetAll();
         public Task UpdateInvitationDetails(Invitation invitation);
         public Task<List<Invitation>> GetInvitationsForCurrentWeek();
         public Task<object> GetDetailsAboutDate(DateOnly date);
+        public Task<List<Invitation>> GetByCustomerId(int customerId);
     }
 }

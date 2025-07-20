@@ -192,3 +192,18 @@ C:\React\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\Hal
 C:\React\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.pdb
 C:\React\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
 C:\React\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll
+C:\Hall-Management-System\Backend\Dal\bin\Debug\net8.0\Dal.deps.json
+C:\Hall-Management-System\Backend\Dal\bin\Debug\net8.0\Dal.runtimeconfig.json
+C:\Hall-Management-System\Backend\Dal\bin\Debug\net8.0\Dal.dll
+C:\Hall-Management-System\Backend\Dal\bin\Debug\net8.0\Dal.pdb
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.csproj.AssemblyReference.cache
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfoInputs.cache
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.AssemblyInfo.cs
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.csproj.CoreCompileInputs.cache
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.sourcelink.json
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.dll
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\refint\Dal.dll
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.pdb
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\Dal.genruntimeconfig.cache
+C:\Hall-Management-System\Backend\Dal\obj\Debug\net8.0\ref\Dal.dll

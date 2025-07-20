@@ -18,9 +18,9 @@ namespace BL.Services
             Cast = dal.customers;
         }
 
-        public void Create(Customer customer)
+        public async Task<Customer> Create(Customer customer)
         {
-            Cast.Create(customer);
+           return await Cast.Create(customer);
         }
 
 

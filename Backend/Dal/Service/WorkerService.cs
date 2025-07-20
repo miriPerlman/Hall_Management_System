@@ -16,10 +16,11 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public async Task Create(Worker worker)
+        public async Task<Worker> Create(Worker worker)
         {
            await db.AddAsync(worker);
            await db.SaveChangesAsync();
+            return worker;
         }
 
         public async Task Delete(Worker item)

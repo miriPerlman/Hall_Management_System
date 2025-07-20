@@ -19,6 +19,7 @@ import { useDispatch } from 'react-redux';
 import { getByIdAsyncAction } from '../../Redux/thunk';
 import '../css files/LOgin.css';
 
+
 const THEME = createTheme({
   palette: {
     primary: {
@@ -61,7 +62,7 @@ const LogIn = () => {
           setMessage('Welcome again!!');
           const firstName = resultAction.payload.obj.firstName || 'Guest';
           await new Promise((resolve) => setTimeout(resolve, 1000));
-          navigate(`/PersonalArea/${firstName}`);
+          navigate(`/PersonalArea/${password}`);
         } else {
           setMessage('Welcome worker!');
           await new Promise((resolve) => setTimeout(resolve, 1000));

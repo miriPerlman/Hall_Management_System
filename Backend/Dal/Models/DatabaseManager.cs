@@ -37,7 +37,7 @@ public partial class DatabaseManager : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\database\\Halldb.mdf;Integrated Security=True;Connect Timeout=30");
+        => optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Hall-Management-System\\Backend\\Dal\\database\\Halldb.mdf;Integrated Security=True;Connect Timeout=30");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -48,19 +48,15 @@ public partial class DatabaseManager : DbContext
             entity.ToTable("Customer");
 
             entity.Property(e => e.Id).ValueGeneratedNever();
-            entity.Property(e => e.Email).UseCollation("SQL_Latin1_General_CP1_CI_AS");
             entity.Property(e => e.FirstName)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
             entity.Property(e => e.LastName)
                 .HasMaxLength(20)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
             entity.Property(e => e.PhoneNum)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
         });
 
         modelBuilder.Entity<Dish>(entity =>
@@ -129,11 +125,10 @@ public partial class DatabaseManager : DbContext
 
         modelBuilder.Entity<LastDish>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__last_dis__3214EC075F2EC67D");
+            entity.HasKey(e => e.Id).HasName("PK__tmp_ms_x__3214EC07B9802BA5");
 
             entity.ToTable("last_dish");
 
-            entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.FruitSmoothie).HasColumnName("Fruit_smoothie");
             entity.Property(e => e.IceCream).HasColumnName("Ice_cream");
         });
@@ -158,8 +153,7 @@ public partial class DatabaseManager : DbContext
 
             entity.Property(e => e.TypeOfDish)
                 .HasMaxLength(20)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
         });
 
         modelBuilder.Entity<Salad>(entity =>
@@ -180,20 +174,14 @@ public partial class DatabaseManager : DbContext
             entity.Property(e => e.Id).ValueGeneratedNever();
             entity.Property(e => e.Bonus)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
-            entity.Property(e => e.Email).UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
             entity.Property(e => e.Phone)
                 .HasMaxLength(10)
-                .IsFixedLength()
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
-            entity.Property(e => e.WorkerType)
-                .HasMaxLength(50)
-                .UseCollation("SQL_Latin1_General_CP1_CI_AS");
+                .IsFixedLength();
+            entity.Property(e => e.WorkerType).HasMaxLength(50);
         });
 
         OnModelCreatingPartial(modelBuilder);

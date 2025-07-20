@@ -9,6 +9,7 @@ namespace BL.Api
 {
     public interface IBLdish
     {
+        public Task<Dish> GetDishByID(int id);
         public Task<Dish> Create(Dish dish);
         public Task<FirstDish> CreateFirstDish(FirstDish dish);
         public Task<LastDish> CreateLastDish(LastDish dish);

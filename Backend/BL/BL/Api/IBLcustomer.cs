@@ -11,7 +11,7 @@ namespace BL.Api
     {
         public Task<List<Customer>> GetAll();
         public Task<Customer> GetCustomerByIdAsync(int id);
-        public void Create(Customer customer);
+        public Task<Customer> Create(Customer customer);
         public Task DeleteCustoer(int id);
     }
 

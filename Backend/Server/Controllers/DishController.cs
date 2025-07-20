@@ -24,7 +24,7 @@ namespace Server.Controllers
         [HttpPost("createNewFirstDish")]
         public async Task<ActionResult<FirstDish>> CreateNewFirstDish([FromBody] FirstDish newDish)
         {
-            var dish = await dishActions.CreateFirstDish(newDish);
+            var dish= await dishActions.CreateFirstDish(newDish);
             return Ok(dish);
         }
 

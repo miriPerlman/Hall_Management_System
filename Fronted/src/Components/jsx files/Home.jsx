@@ -28,10 +28,10 @@ const handleNavigateToFidback = () => {
       <h1>Welcome to your hall!!</h1>
       <p>MAZAL TOV!!</p>
       <div className="button-row">
-        <button onClick={handleNavigateToGelery}>Gellerya ></button>
-        <button onClick={handleNavigateToMenus}>Menus ></button>
-        <button onClick={handleNavigateToFidback}>Fidback ></button>
-        <button onClick={handleNavigateToOrder}>insert into--! ></button>
+        <button onClick={handleNavigateToGelery}>Gellerya </button>
+        <button onClick={handleNavigateToMenus}>Menus </button>
+        <button onClick={handleNavigateToFidback}>Fidback </button>
+        <button onClick={handleNavigateToOrder}>insert into--! </button>
       </div>
     </div>
   );

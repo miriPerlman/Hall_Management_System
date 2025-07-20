@@ -17,10 +17,11 @@ namespace Dal.Service
             this.db = db;
         }
 
-        public async Task Create(Salad entity)
+        public async Task<Salad> Create(Salad entity)
         {
             await db.Salads.AddAsync(entity);
             await db.SaveChangesAsync();
+            return entity;
         }
 
         public Task<List<Salad>> Read()

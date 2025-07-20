@@ -17,10 +17,11 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public async Task Create(MainDish entity)
+        public async Task<MainDish> Create(MainDish entity)
         {
             await db.MainDishes.AddAsync(entity);
             await db.SaveChangesAsync();
+            return entity;
         }
 
         // Fix for CS0738: Implement 'ICrud<MainDish>.Read()' with correct return type

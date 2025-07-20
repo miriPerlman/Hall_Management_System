@@ -3270,11 +3270,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Hall-Management-System\\Backend\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Server\\Server.csproj",
+      "projectPath": "C:\\Hall-Management-System\\Backend\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Server\\obj\\",
+      "outputPath": "C:\\Hall-Management-System\\Backend\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3296,8 +3296,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\BL\\BL\\BL.csproj": {
-              "projectPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\BL\\BL\\BL.csproj"
+            "C:\\Hall-Management-System\\Backend\\BL\\BL\\BL.csproj": {
+              "projectPath": "C:\\Hall-Management-System\\Backend\\BL\\BL\\BL.csproj"
             }
           }
         }

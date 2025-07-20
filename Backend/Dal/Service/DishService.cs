@@ -1,5 +1,6 @@
 ﻿using Dal.Api;
 using Dal.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +16,11 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public async Task Create(Dish dish)
+        public async Task<Dish> Create(Dish dish)
         {
             await db.Dishes.AddAsync(dish);
             await db.SaveChangesAsync();
-
+            return dish;
 
         }
 
@@ -28,9 +29,9 @@ namespace Dal.Service
             throw new NotImplementedException();
         }
 
-        public Task<List<Dish>> Read()
+        public async Task<List<Dish>> Read()
         {
-            throw new NotImplementedException();
+            return await db.Dishes.ToListAsync();
         }
 
         public Task UpDate(Dish item)

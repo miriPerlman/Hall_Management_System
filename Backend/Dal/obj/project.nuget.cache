@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MpZpB6vo63s=",
+  "dgSpecHash": "5yZyS6sMWlE=",
   "success": true,
-  "projectFilePath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
+  "projectFilePath": "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -95,9 +95,9 @@
       "code": "NU1900",
       "level": "Warning",
       "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
-      "projectPath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
+      "projectPath": "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\React\\פרויקט אולם אחרי מיזוג עם שרי יא תמוז\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
+      "filePath": "C:\\Hall-Management-System\\Backend\\Dal\\Dal.csproj",
       "targetGraphs": []
     }
   ]

@@ -2,6 +2,7 @@
 using Dal.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Server.Controllers
 {
@@ -10,9 +11,15 @@ namespace Server.Controllers
     public class InvitationsController : ControllerBase
     {
         IBLInvitation invitationActions;
+        IBLauthorization authorizationActions;
+        IBLcustomer customerActions;
+        IBLdish dishActions;
         public InvitationsController(IBlManager bl)
         {
             invitationActions = bl.BlInvitation;
+            authorizationActions = bl.BlAuthorization;
+            dishActions=bl.Bldish;
+            customerActions = bl.BlCustomer;
         }
 
 
@@ -28,13 +35,59 @@ namespace Server.Controllers
             return Ok(allinvitations);
         }
 
+        [HttpGet("{customerId}")]
+        public async Task<IActionResult> GetInvitationsHistory(int customerId)
+        {
+            var invitations = await invitationActions.GetByCustomerId(customerId);
+            if (invitations == null || invitations.Count == 0)
+            {
+                return NotFound("No invitations found for this customer.");
+            }
+            return Ok(invitations);
+        }
 
-        [HttpPost]
-        public ActionResult<Invitation> CreateNewInvitation([FromBody] Invitation invitation)
+
+        [HttpPost("createNewInvitation")]
+        public async Task<ActionResult<Invitation>> CreateNewInvitation([FromBody] InvitationDTO dto)
         {
             {
-                invitationActions.Create(invitation);
-                return invitation;
+                var customerFromDb = await authorizationActions.GetCustomerByIdAsync(dto.CustomerId);
+                if (customerFromDb == null)
+                {
+                    var workerFromDb = await authorizationActions.GetWorkerByIdAsync(dto.CustomerId);
+                    if(workerFromDb==null) return NotFound("Customer not found");
+                    else
+                    {
+                        customerFromDb =await customerActions.Create(new Customer()
+                        {
+                            Email = workerFromDb.Email,
+                            FirstName = workerFromDb.Name,
+                            LastName = workerFromDb.Name,
+                            Id = workerFromDb.Id,
+                            PhoneNum = workerFromDb.Phone
+                        });
+                    }
+                    
+                }
+
+                var dishFromDb = await dishActions.GetDishByID(dto.DishId);
+                if (dishFromDb == null) return NotFound("Dish not found");
+
+                var newInvitation = new Invitation
+                {
+                    Customer = customerFromDb,
+                    Dish = dishFromDb,
+                    Date = dto.Date,
+                    CountOfDishes = dto.CountOfDishes,
+                    IsUpgradedDish = dto.IsUpgradedDish,
+                    NumberOfWaiters=dto.NumberOfWaiters,
+                    DishId = dto.DishId,
+                    InMorning=dto.InMorning,
+                    CustomerId=customerFromDb.Id
+    };
+
+                var Invitation = await invitationActions.Create(newInvitation);
+                 return Ok(Invitation);
             }
         }
 

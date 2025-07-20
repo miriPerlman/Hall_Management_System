@@ -113,28 +113,19 @@ const Galery = () => {
 
   return (
     <ThemeProvider theme={THEME}>
-      <div className="gallery-event-buttons-fixed">
-        {eventButtons.map(btn => (
-          <Button
-            key={btn.type}
-            variant={event === btn.type ? "contained" : "outlined"}
-            color="primary"
-            sx={{
-              mb: 1,
-              fontWeight: 700,
-              borderRadius: 3,
-              minWidth: 120,
-              letterSpacing: 1,
-              fontSize: '1.1em',
-              boxShadow: event === btn.type ? 2 : 0,
-              borderWidth: 2
-            }}
-            onClick={() => navigate(`/Galery?event=${btn.type}`)}
-          >
-            {btn.label}
-          </Button>
-        ))}
-      </div>
+     // החלף את כל הבלוק הזה בקוד שלך
+<div className="gallery-event-buttons-fixed">
+  {eventButtons.map(btn => (
+    <button
+      key={btn.type}
+      // כאן השינוי המרכזי: הגדרת className דינמית
+      className={`gallery-event-btn ${event === btn.type ? 'selected' : ''}`}
+      onClick={() => navigate(`/Galery?event=${btn.type}`)}
+    >
+      {btn.label}
+    </button>
+  ))}
+</div>
       <div className="gallery-main-container">
         <Typography variant="h4" gutterBottom className="gallery-title">
           {getEventTitle(event)}

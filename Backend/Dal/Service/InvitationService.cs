@@ -16,10 +16,11 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public async Task Create(Invitation item)
+        public async Task<Invitation> Create(Invitation item)
         {
             await db.Invitations.AddAsync(item);
             await db.SaveChangesAsync();
+            return item;
         }
 
         public async Task Delete(Invitation item)

@@ -16,11 +16,12 @@ namespace Dal.Service
         {
             this.db = db;
         }
-        public async Task Create(Customer customer)
+        public async Task<Customer> Create(Customer customer)
         {
           
            await db.AddAsync(customer);
            await db.SaveChangesAsync();
+           return customer;
         }
 
         public async Task Delete(Customer item)

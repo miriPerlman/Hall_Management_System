@@ -8,7 +8,7 @@ namespace Dal.Api
 {
     public interface ICrud<T>
     {
-        Task Create(T item);
+        Task<T> Create(T item);
         Task<List<T>> Read();
         Task Delete(T item);
         Task UpDate(T item);

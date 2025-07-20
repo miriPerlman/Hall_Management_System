@@ -5,7 +5,7 @@ const userSlice = createSlice({
     name: 'user',
     initialState: {
         customer: null,
-        id: null
+        nameForNav: null
     },
     reducers: {
         insertId:(state, action) => {
@@ -26,13 +26,13 @@ const userSlice = createSlice({
             })
             .addCase(getByIdAsyncAction.fulfilled, (state, action) => {
                 state.customer = action.payload;
-                state.id = action.payload.id; // Assuming the payload has an 'id' field
+                state.nameForNav = action.payload.FirstName; // Assuming the payload has an 'id' field
             })
             .addCase(getByIdAsyncAction.pending, (state) => {
-                state.id = null;
+                state.nameForNav = null;
             })
             .addCase(getByIdAsyncAction.rejected, (state) => {
-                state.id = null;
+                state.nameForNav = null;
             });
     }
 });

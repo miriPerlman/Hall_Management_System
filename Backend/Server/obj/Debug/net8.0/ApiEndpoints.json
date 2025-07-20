@@ -305,32 +305,6 @@
   },
   {
     "ContainingType": "Server.Controllers.InvitationsController",
-    "Method": "CreateNewInvitation",
-    "RelativePath": "api/Invitations",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "invitation",
-        "Type": "Dal.Models.Invitation",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Dal.Models.Invitation",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Server.Controllers.InvitationsController",
     "Method": "UpdateInvitation",
     "RelativePath": "api/Invitations",
     "HttpMethod": "PUT",
@@ -340,6 +314,22 @@
       {
         "Name": "newInvitation",
         "Type": "Dal.Models.Invitation",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Server.Controllers.InvitationsController",
+    "Method": "GetInvitationsHistory",
+    "RelativePath": "api/Invitations/{customerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],
@@ -383,6 +373,32 @@
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Server.Controllers.InvitationsController",
+    "Method": "CreateNewInvitation",
+    "RelativePath": "api/Invitations/createNewInvitation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Dal.Models.InvitationDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Dal.Models.Invitation",
         "MediaTypes": [
           "text/plain",
           "application/json",
